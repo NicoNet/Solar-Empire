@@ -87,7 +87,7 @@ while (list($game) = mysql_fetch_row($games)) {
 	$planets = mysql_query("SELECT planet_id, planet_name, p.login_id, tax_rate, " .
 	 "fuel, metal, elect, colon, alloc_fight, alloc_elect, alloc_organ, " .
 	 "u.planet_report FROM {$game}_planets AS p LEFT JOIN {$game}_user_options " .
-	 "AS u ON u.login_id = p.login_id WHERE p.planet_id != 1") or die(mysql_error());
+	 "AS u ON u.login_id = p.login_id") or die(mysql_error());
 	print "done\n";
 	 
 	 
